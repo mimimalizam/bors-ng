@@ -72,7 +72,7 @@ defmodule BorsNG.Worker.Batcher.BorsToml do
           block_labels: Map.get(toml, "block_labels", []),
           pr_status: Map.get(toml, "pr_status", []),
           timeout_sec: Map.get(toml, "timeout_sec", 60 * 60),
-          required_approvals: Map.get(toml, "required_approvals", 0),
+          required_approvals: Map.get(toml, "required_approvals", nil),
           cut_body_after: Map.get(toml, "cut_body_after", nil),
           delete_merged_branches: Map.get(toml,
                                           "delete_merged_branches",
